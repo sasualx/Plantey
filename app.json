@@ -1,3 +1,6 @@
 {
-  "name": "SaveThePlanet"
+  "expo": {
+    "name": "SaveThePlanet",
+    "slug": "save-the-planet"
+  }
 }
