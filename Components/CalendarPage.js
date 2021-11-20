@@ -5,7 +5,7 @@ import {TaskView} from './TaskView';
 import {View} from 'react-native';
 
 export const CalendarPage = () => {
-  const [selectedDate, setSelectedDate] = useState('2021-11-20');
+  const [selectedDate, setSelectedDate] = useState('2021-11-19');
   const [markedDates, setMarkedDates] = useState({
     '2021-11-14': {
       marked: true,
