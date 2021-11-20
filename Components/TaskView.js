@@ -16,26 +16,17 @@ const Task = ({text, completed = false, disabled = false}) => {
         fillColor={Colors.accent}
         disableBuiltInState={disabled}
       />
-      <Text style={{color: Colors.accent}}>{text}</Text>
+      <Text style={{color: Colors.accent, fontWeight: 'bold'}}>{text}</Text>
     </View>
   );
 };
 
-export const TaskView = ({tasks, disabled}) => {
-  return (
-    <FlatList
-      data={tasks}
-      renderItem={item => {
-        return (
-          <View>
-            <Task
-              text={item.text}
-              completed={item.completed}
-              disabled={disabled}
-            />
-          </View>
-        );
-      }}
-    />
+export const TaskView = ({tasks, disabled, completed}) => {
+  const renderItem = ({item}) => (
+    <View>
+      <Task text={item.text} completed={item.completed} disabled={disabled} />
+    </View>
   );
+
+  return <FlatList data={tasks} renderItem={renderItem} />;
 };
