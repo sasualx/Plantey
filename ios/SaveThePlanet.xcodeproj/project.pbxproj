@@ -14,6 +14,8 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B182987A8CC14663AF38D51E /* josefin-sans.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613186718C1A4327B49712D2 /* josefin-sans.regular.ttf */; };
 		46AD30331E1D4066AB3CEC10 /* Lemon Tuesday.otf in Resources */ = {isa = PBXBuildFile; fileRef = 793924C13B4E48B689AA06D4 /* Lemon Tuesday.otf */; };
+		5D4E5FFCCB854C66B3F83015 /* Euphemia UCAS Regular 2.6.6.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3956686E29E641F9A5685244 /* Euphemia UCAS Regular 2.6.6.ttf */; };
+		9A295C6E4A144B14B13A04E3 /* josefin-sans-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFCB07EBB82E48A688ABA33D /* josefin-sans-regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		613186718C1A4327B49712D2 /* josefin-sans.regular.ttf */ = {isa = PBXFileReference; name = "josefin-sans.regular.ttf"; path = "../Assets/Fonts/josefin-sans.regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		793924C13B4E48B689AA06D4 /* Lemon Tuesday.otf */ = {isa = PBXFileReference; name = "Lemon Tuesday.otf"; path = "../Assets/Fonts/Lemon Tuesday.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3956686E29E641F9A5685244 /* Euphemia UCAS Regular 2.6.6.ttf */ = {isa = PBXFileReference; name = "Euphemia UCAS Regular 2.6.6.ttf"; path = "../Assets/Fonts/Euphemia UCAS Regular 2.6.6.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EFCB07EBB82E48A688ABA33D /* josefin-sans-regular.ttf */ = {isa = PBXFileReference; name = "josefin-sans-regular.ttf"; path = "../Assets/Fonts/josefin-sans-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 			children = (
 				613186718C1A4327B49712D2 /* josefin-sans.regular.ttf */,
 				793924C13B4E48B689AA06D4 /* Lemon Tuesday.otf */,
+				3956686E29E641F9A5685244 /* Euphemia UCAS Regular 2.6.6.ttf */,
+				EFCB07EBB82E48A688ABA33D /* josefin-sans-regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -231,6 +237,8 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				B182987A8CC14663AF38D51E /* josefin-sans.regular.ttf in Resources */,
 				46AD30331E1D4066AB3CEC10 /* Lemon Tuesday.otf in Resources */,
+				5D4E5FFCCB854C66B3F83015 /* Euphemia UCAS Regular 2.6.6.ttf in Resources */,
+				9A295C6E4A144B14B13A04E3 /* josefin-sans-regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

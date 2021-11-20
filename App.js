@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity, Image} from 'react-native';
 import {CalendarPage, HomeScreen, ChallengesPage} from './Components';
 import {Colors as Color, Colors} from './Colors';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -20,18 +20,38 @@ const Tab = createBottomTabNavigator();
 
 function StatsScreen() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{color: Colors.accent}}>
-        Here you will find the stats of your sustainability journey :)
-      </Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%',
+        backgroundColor: Colors.primary,
+      }}>
+      <Image
+        source={require('./Assets/Images/overall-stats.png')}
+        resizeMode={'contain'}
+        style={{width: '100%'}}
+      />
     </View>
   );
 }
 
 function ForumScreen() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{color: Colors.accent}}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%',
+        backgroundColor: Colors.base,
+      }}>
+      <Text
+        style={{
+          color: Colors.accent,
+          fontFamily: 'Euphemia UCAS Regular 2.6.6',
+        }}>
         Expect exciting community initiatives about sustainability!
       </Text>
     </View>

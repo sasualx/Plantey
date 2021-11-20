@@ -6,7 +6,7 @@ import {Colors} from '../Colors';
 export const Header: () => Node = () => {
   return (
     <View style={styles.bar}>
-      <Text>BottomBar</Text>
+      <Text style={{fontFamily: 'Euphemia UCAS Regular 2.6.6'}}>BottomBar</Text>
     </View>
   );
 };

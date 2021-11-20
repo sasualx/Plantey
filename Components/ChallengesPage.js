@@ -60,7 +60,14 @@ export const ChallengesPage = ({navigation}) => {
         <Card.Actions>
           <Button color={Colors.accent}>Join!</Button>
           <Button color={Colors.accent}>See details</Button>
-          <Text style={{position: 'absolute', right: 20}}>7 days left</Text>
+          <Text
+            style={{
+              position: 'absolute',
+              right: 20,
+              fontFamily: 'Euphemia UCAS Regular 2.6.6',
+            }}>
+            7 days left
+          </Text>
         </Card.Actions>
       </Card>
       <Card>
@@ -78,7 +85,14 @@ export const ChallengesPage = ({navigation}) => {
         <Card.Actions>
           <Button color={Colors.accent}>Join!</Button>
           <Button color={Colors.accent}>See details</Button>
-          <Text style={{position: 'absolute', right: 20}}>30 days left</Text>
+          <Text
+            style={{
+              position: 'absolute',
+              right: 20,
+              fontFamily: 'Euphemia UCAS Regular 2.6.6',
+            }}>
+            30 days left
+          </Text>
         </Card.Actions>
       </Card>
 
@@ -97,7 +111,14 @@ export const ChallengesPage = ({navigation}) => {
         <Card.Actions>
           <Button color={Colors.accent}>Join!</Button>
           <Button color={Colors.accent}>See details</Button>
-          <Text style={{position: 'absolute', right: 20}}>2 days left</Text>
+          <Text
+            style={{
+              position: 'absolute',
+              right: 20,
+              fontFamily: 'Euphemia UCAS Regular 2.6.6',
+            }}>
+            2 days left
+          </Text>
         </Card.Actions>
       </Card>
     </ScrollView>

@@ -25,7 +25,14 @@ const Task = ({text, completed = false, disabled = false, onCheckboxClick}) => {
           }
         }}
       />
-      <Text style={{color: Colors.accent, fontSize: 20}}>{text}</Text>
+      <Text
+        style={{
+          color: Colors.accent,
+          fontSize: 20,
+          fontFamily: 'Euphemia UCAS Regular 2.6.6',
+        }}>
+        {text}
+      </Text>
     </View>
   );
 };

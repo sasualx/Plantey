@@ -7,7 +7,13 @@ const ProgressBar = ({points, goal}) => {
   return (
     <View style={progressStyles.containerStyle}>
       <View style={[progressStyles.innerStyle, {width: value + '%'}]} />
-      <Text style={progressStyles.label}>{points + '/' + goal}</Text>
+      <Text
+        style={{
+          ...progressStyles.label,
+          fontFamily: 'Euphemia UCAS Regular 2.6.6',
+        }}>
+        {points + '/' + goal}
+      </Text>
     </View>
   );
 };

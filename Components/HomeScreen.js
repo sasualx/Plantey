@@ -1,4 +1,4 @@
-import {Button, Image, Text, View} from 'react-native';
+import {Button, Image, ScrollView, Text, View} from 'react-native';
 import * as React from 'react';
 import {useState} from 'react';
 import {TaskView} from './TaskView';
@@ -6,11 +6,11 @@ import ProgressBar from './ProgressBar';
 import {Colors} from '../Colors';
 
 export const HomeScreen = ({navigation}) => {
-  let goal = 140;
-  const [points, setPoints] = useState(60);
+  let goal = 1400;
+  const [points, setPoints] = useState(600);
 
   const onCheckboxClick = on => {
-    setPoints(on ? points + 10 : points - 10);
+    setPoints(on ? points + 100 : points - 100);
   };
 
   return (
@@ -22,7 +22,13 @@ export const HomeScreen = ({navigation}) => {
       }}>
       <View>
         <Text
-          style={{color: Colors.accent, fontSize: 28, padding: 40, left: 15}}>
+          style={{
+            color: Colors.accent,
+            fontSize: 28,
+            padding: 40,
+            left: 15,
+            fontFamily: 'Euphemia UCAS Regular 2.6.6 Regular 2.6.6',
+          }}>
           6 trees planted this week. Keep it up!
         </Text>
       </View>
