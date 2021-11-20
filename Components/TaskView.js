@@ -15,6 +15,7 @@ const Task = ({text, completed = false, disabled = false, onCheckboxClick}) => {
       <BouncyCheckbox
         isChecked={completed}
         fillColor={Colors.accent}
+        unfillColor={Colors.base}
         disableBuiltInState={disabled}
         onPress={(isChecked: boolean) => {
           if (isChecked) {
@@ -24,9 +25,7 @@ const Task = ({text, completed = false, disabled = false, onCheckboxClick}) => {
           }
         }}
       />
-      <Text style={{color: Colors.accent, fontWeight: 'bold', fontSize: 20}}>
-        {text}
-      </Text>
+      <Text style={{color: Colors.accent, fontSize: 20}}>{text}</Text>
     </View>
   );
 };
