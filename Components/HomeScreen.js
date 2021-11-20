@@ -5,6 +5,7 @@ import {TaskView} from './TaskView';
 import ProgressBar from './ProgressBar';
 
 export const HomeScreen = ({navigation}) => {
+  const staticImage = require('../Assets/Images/tress.jpg');
   let goal = 140;
   const [points, setPoints] = useState(60);
 
@@ -14,13 +15,14 @@ export const HomeScreen = ({navigation}) => {
 
   return (
     <View style={{padding: 20, flexDirection: 'column'}}>
+      <View />
       <ProgressBar points={points} goal={goal} />
       <View style={{paddingTop: 50}}>
         <TaskView
           tasks={[
             {text: 'Recycle plastic', completed: true},
-            {text: 'Took the bike to work'},
-            {text: 'Bought food in zero-waste packaging'},
+            {text: 'Bike to work'},
+            {text: 'Plastic free grocery shopping'},
             {text: 'Skip meat for a day'},
           ]}
           onCheckboxClick={onCheckboxClick}
