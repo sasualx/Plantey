@@ -35,19 +35,31 @@ export const CalendarPage = () => {
       onDayPress={day => {
         console.log('selected day', day);
         console.log(markedDates);
-        console.log(markedDates[day.dateString]);
-        setMarkedDates({
-          ...markedDates,
-          selectedDate: {
-            ...markedDates[selectedDate],
-            selected: false,
-          },
-          day: {
-            ...markedDates[day.dateString],
-            selected: true,
-          },
-        });
-        setSelectedDate(day);
+        markedDates[day.dateString] = {
+          ...markedDates[day.dateString],
+          selected: true,
+        };
+        setMarkedDates(
+          Object.fromEntries(
+            Object.keys(markedDates).map(function (key) {
+              return [
+                key,
+                key === selectedDate
+                  ? {
+                      ...markedDates[key],
+                      selected: false,
+                    }
+                  : key === day.dateString
+                  ? {
+                      ...markedDates[key],
+                      selected: true,
+                    }
+                  : markedDates[key],
+              ];
+            }),
+          ),
+        );
+        setSelectedDate(day.dateString);
       }}
       markingType={'multi-dot'}
       markedDates={markedDates}
