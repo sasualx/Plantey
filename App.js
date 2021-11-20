@@ -2,6 +2,7 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {Text, View, TouchableOpacity} from 'react-native';
 import {CalendarPage, HomeScreen} from './Components';
+// import ChallengesPage from './Components/ChallengesPage';
 import {Colors as Color, Colors} from './Colors';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -18,10 +19,18 @@ import {
 
 const Tab = createBottomTabNavigator();
 
-function SettingsScreen() {
+function StatsScreen() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
+      <Text>Here you will find the stats of your sustainability journey :)</Text>
+    </View>
+  );
+}
+
+function ForumScreen() {
+  return (
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Expect exciting community initiatives about sustainability!</Text>
     </View>
   );
 }
@@ -93,7 +102,7 @@ const App = () => {
             backgroundColor: Colors.primary,
           },
         })}>
-        <Tab.Screen name="Forum" component={HomeScreen} />
+        <Tab.Screen name="Forum" component={ForumScreen} />
         <Tab.Screen name="Record" component={CalendarPage} />
         <Tab.Screen
           name="Tasks"
@@ -103,8 +112,8 @@ const App = () => {
             tabBarBadgeStyle: {backgroundColor: Colors.base},
           }}
         />
-        <Tab.Screen name="Challenges" component={SettingsScreen} />
-        <Tab.Screen name="Statistics" component={SettingsScreen} />
+        <Tab.Screen name="Challenges" component={HomeScreen} />
+        <Tab.Screen name="Statistics" component={StatsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
