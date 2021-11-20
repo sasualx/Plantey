@@ -53,7 +53,7 @@ export const ChallengesPage = ({navigation}) => {
         <Card.Title
           title="Zero waste for a week"
           subtitle="1000 plantey points"
-          fontFamily="josefin-sans-regular"
+          fontFamily="Euphemia UCAS Regular 2.6.6"
           left={LeftContentInterhyp}
         />
         <Card.Cover source={zero_waste_img} />
@@ -74,7 +74,7 @@ export const ChallengesPage = ({navigation}) => {
         <Card.Title
           title="Commuter challenge"
           subtitle="500 plantey points"
-          fontFamily="josefin-sans-regular"
+          fontFamily="Euphemia UCAS Regular 2.6.6"
           left={LeftContentMunich}
         />
         {/* <Card.Content>
@@ -100,7 +100,7 @@ export const ChallengesPage = ({navigation}) => {
         <Card.Title
           title="Sustainability hackathon"
           subtitle="3000 plantey points"
-          fontFamily="josefin-sans-regular"
+          fontFamily="Euphemia UCAS Regular 2.6.6"
           left={LeftContentMicrosoft}
         />
         {/* <Card.Content>
