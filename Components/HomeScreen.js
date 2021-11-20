@@ -14,20 +14,7 @@ export const HomeScreen = ({navigation}) => {
 
   return (
     <View style={{padding: 20, flexDirection: 'column'}}>
-      <View style={{height: '25%'}}>
-        {/*<Image
-          style={{
-            position: 'absolute',
-            zIndex: -1,
-            opacity: 0.8,
-            height: 1200,
-            left: -200,
-            top: -470,
-          }}
-          resizeMode="stretch"
-          source={require('../Assets/Images/valentin-salja-Z3oT1r3Pq0Y-unsplash.jpg')}
-        />*/}
-      </View>
+      <View style={{height: '25%'}} />
       <ProgressBar points={points} goal={goal} />
       <View style={{paddingTop: 50}}>
         <TaskView
