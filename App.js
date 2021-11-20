@@ -16,9 +16,6 @@ import {
   faCalendarDay,
 } from '@fortawesome/free-solid-svg-icons';
 
-// import 'react-native-gesture-handler';
-// import {createStackNavigator} from '@react-navigation/stack';
-
 const Tab = createBottomTabNavigator();
 
 function SettingsScreen() {
