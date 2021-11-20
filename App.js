@@ -33,6 +33,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        initialRouteName='Tasks'
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
             let iconName;
