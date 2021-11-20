@@ -18,6 +18,8 @@ import {
   View,
 } from 'react-native';
 
+import {BottomBar} from './Components';
+
 import {
   Colors,
   DebugInstructions,
@@ -85,6 +87,7 @@ const App: () => Node = () => {
           </Section>
           <LearnMoreLinks />
         </View>
+        <BottomBar />
       </ScrollView>
     </SafeAreaView>
   );
