@@ -31,15 +31,11 @@ export const CalendarPage = () => {
         {color: Colors.accent},
         {color: Colors.accent},
       ],
-    },
-    '2021-11-20': {
       selected: true,
     },
   });
   let tasks = {
-    '2021-11-14': [
-      {text: 'Community compost', completed: true},
-    ],
+    '2021-11-14': [{text: 'Community compost', completed: true}],
     '2021-11-17': [
       {text: 'Recycle plastic', completed: true},
       {text: 'Bike to work', completed: true},

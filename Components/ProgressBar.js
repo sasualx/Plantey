@@ -20,7 +20,7 @@ const progressStyles = StyleSheet.create({
     borderColor: Colors.base,
     borderWidth: 3,
     borderRadius: 30,
-    marginTop: 200,
+    marginTop: 0,
     justifyContent: 'center',
     backgroundColor: Colors.primary,
   },
