@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import {Colors} from '../Colors';
 
-const staticImage = require("./the-creative-exchange-ixS7UCRJTdM-unsplash.jpg");
+const staticImage = require("../Assets/Images/the-creative-exchange-ixS7UCRJTdM-unsplash.jpg");
 
 const styles = StyleSheet.create({
     container: {
