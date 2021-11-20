@@ -14,11 +14,16 @@ export const HomeScreen = ({navigation}) => {
   };
 
   return (
-    <View style={{padding: 20, flexDirection: 'column'}}>
+    <View
+      style={{
+        padding: 20,
+        flexDirection: 'column',
+        backgroundColor: Colors.base,
+      }}>
       <View>
-        <Text style={{color: Colors.accent, fontSize: 28, padding: 40}}>
-          Good job! You already collected enough points to plant 6 trees this
-          week. Can you make it to 14?
+        <Text
+          style={{color: Colors.accent, fontSize: 28, padding: 40, left: 15}}>
+          6 trees planted this week. Keep it up!
         </Text>
       </View>
       <ProgressBar points={points} goal={goal} />
@@ -34,6 +39,11 @@ export const HomeScreen = ({navigation}) => {
           onCheckboxClick={onCheckboxClick}
         />
       </View>
+      <Image
+        source={require('../Assets/Images/trees-graphic-cropped.png')}
+        style={{width: '110%', left: -15, bottom: 20}}
+        resizeMode="contain"
+      />
     </View>
   );
 };
