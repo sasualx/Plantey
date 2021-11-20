@@ -32,6 +32,22 @@ export const CalendarPage = () => {
       selected: true,
     },
   });
+  let tasks = {
+    '2021-11-17': [
+      {text: 'Recycle plastic', completed: true},
+      {text: 'Took the bike to work', completed: true},
+      {text: 'Bought food in zero-waste packaging', completed: true},
+    ],
+    '2021-11-18': [
+      {text: 'Recycle plastic', completed: true},
+      {text: 'Took the bike to work', completed: true},
+    ],
+    '2021-11-19': [
+      {text: 'Recycle plastic', completed: true},
+      {text: 'Took the bike to work', completed: true},
+      {text: 'Bought food in zero-waste packaging', completed: true},
+    ],
+  };
   return (
     <>
       <Calendar
@@ -74,10 +90,7 @@ export const CalendarPage = () => {
         }}
       />
       <View style={{padding: 20}}>
-        <TaskView
-          tasks={[{text: 'Recycle plastic', completed: true}]}
-          disabled={true}
-        />
+        <TaskView tasks={tasks[selectedDate]} disabled={true} />
       </View>
     </>
   );

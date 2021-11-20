@@ -6,11 +6,14 @@ import {TaskView} from './TaskView';
 export const HomeScreen = ({navigation}) => {
   return (
     <View style={{padding: 20, flexDirection: 'column'}}>
-      <View style={{height: '50%'}} />
+      <View style={{height: '55%'}} />
       <View>
         <TaskView
-          tasks={[{text: 'Recycle plastic', completed: false}]}
-          disabled={false}
+          tasks={[
+            {text: 'Recycle plastic', completed: true},
+            {text: 'Took the bike to work'},
+            {text: 'Bought food in zero-waste packaging'},
+          ]}
         />
       </View>
     </View>

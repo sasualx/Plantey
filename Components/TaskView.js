@@ -10,18 +10,21 @@ const Task = ({text, completed = false, disabled = false}) => {
       style={{
         color: Colors.primary,
         flexDirection: 'row',
+        paddingBottom: 10,
       }}>
       <BouncyCheckbox
-        completed={completed}
+        isChecked={completed}
         fillColor={Colors.accent}
         disableBuiltInState={disabled}
       />
-      <Text style={{color: Colors.accent, fontWeight: 'bold'}}>{text}</Text>
+      <Text style={{color: Colors.accent, fontWeight: 'bold', fontSize: 20}}>
+        {text}
+      </Text>
     </View>
   );
 };
 
-export const TaskView = ({tasks, disabled, completed}) => {
+export const TaskView = ({tasks, disabled}) => {
   const renderItem = ({item}) => (
     <View>
       <Task text={item.text} completed={item.completed} disabled={disabled} />
