@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import {Colors} from '../Colors';
 import {TaskView} from './TaskView';
-import {View} from 'react-native';
+import {Image, View} from 'react-native';
 
 export const CalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState('2021-11-19');
@@ -53,36 +53,36 @@ export const CalendarPage = () => {
     ],
   };
   return (
-    <>
+    <View style={{backgroundColor: Colors.base, height: '100%'}}>
       <Calendar
         onDayPress={day => {
-          console.log('selected day', day);
-          console.log(markedDates);
-          markedDates[day.dateString] = {
-            ...markedDates[day.dateString],
-            selected: true,
-          };
-          setMarkedDates(
-            Object.fromEntries(
-              Object.keys(markedDates).map(function (key) {
-                return [
-                  key,
-                  key === selectedDate
-                    ? {
-                        ...markedDates[key],
-                        selected: false,
-                      }
-                    : key === day.dateString
-                    ? {
-                        ...markedDates[key],
-                        selected: true,
-                      }
-                    : markedDates[key],
-                ];
-              }),
-            ),
-          );
-          setSelectedDate(day.dateString);
+          if (day.dateString !== selectedDate) {
+            markedDates[day.dateString] = {
+              ...markedDates[day.dateString],
+              selected: true,
+            };
+            setMarkedDates(
+              Object.fromEntries(
+                Object.keys(markedDates).map(function (key) {
+                  return [
+                    key,
+                    key === selectedDate
+                      ? {
+                          ...markedDates[key],
+                          selected: false,
+                        }
+                      : key === day.dateString
+                      ? {
+                          ...markedDates[key],
+                          selected: true,
+                        }
+                      : markedDates[key],
+                  ];
+                }),
+              ),
+            );
+            setSelectedDate(day.dateString);
+          }
         }}
         markingType={'multi-dot'}
         markedDates={markedDates}
@@ -96,6 +96,11 @@ export const CalendarPage = () => {
       <View style={{padding: 20}}>
         <TaskView tasks={tasks[selectedDate]} disabled={true} />
       </View>
-    </>
+      <Image
+        source={require('../Assets/Images/trees-graphic-cropped.png')}
+        style={{width: '100%', left: 5, bottom: -130, position: 'absolute'}}
+        resizeMode="contain"
+      />
+    </View>
   );
 };

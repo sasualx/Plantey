@@ -41,7 +41,7 @@ export const HomeScreen = ({navigation}) => {
       </View>
       <Image
         source={require('../Assets/Images/trees-graphic-cropped.png')}
-        style={{width: '110%', left: -15, bottom: 20}}
+        style={{width: '110%', left: -15, bottom: -18}}
         resizeMode="contain"
       />
     </View>
