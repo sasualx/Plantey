@@ -7,6 +7,10 @@ import {View} from 'react-native';
 export const CalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState('2021-11-20');
   const [markedDates, setMarkedDates] = useState({
+    '2021-11-14': {
+      marked: true,
+      dots: [{color: Colors.accent}],
+    },
     '2021-11-17': {
       marked: true,
       dots: [
@@ -33,19 +37,23 @@ export const CalendarPage = () => {
     },
   });
   let tasks = {
+    '2021-11-14': [
+      {text: 'Community compost', completed: true},
+    ],
     '2021-11-17': [
       {text: 'Recycle plastic', completed: true},
-      {text: 'Took the bike to work', completed: true},
-      {text: 'Bought food in zero-waste packaging', completed: true},
+      {text: 'Bike to work', completed: true},
+      {text: 'Plastic free grocery shopping', completed: true},
+      {text: 'Zero food waste', completed: true},
     ],
     '2021-11-18': [
-      {text: 'Recycle plastic', completed: true},
-      {text: 'Took the bike to work', completed: true},
+      {text: 'Zero food waste', completed: true},
+      {text: 'Bike to work', completed: true},
     ],
     '2021-11-19': [
-      {text: 'Recycle plastic', completed: true},
-      {text: 'Took the bike to work', completed: true},
-      {text: 'Bought food in zero-waste packaging', completed: true},
+      {text: 'Zero food waste', completed: true},
+      {text: 'Bike to work', completed: true},
+      {text: 'Plastic free grocery shopping', completed: true},
     ],
   };
   return (

@@ -2,30 +2,39 @@ import React, {useState} from 'react';
 // import { StatusBar } from "expo-status-bar";
 import {StyleSheet, Text, View, ImageBackground} from 'react-native';
 import {Colors} from '../Colors';
+import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import {
+  faSeedling,
+  faTrophy,
+  faCommentDots,
+  faTree,
+  faLeaf,
+  faHome,
+  faUser,
+  faCalendarDay,
+} from '@fortawesome/free-solid-svg-icons';
 
-const staticImage = require('../Assets/Images/the-creative-exchange-ixS7UCRJTdM-unsplash.jpg');
+// const LeftContent = props => <Avatar.Icon {...props} icon="camera" color={Colors.primary} />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  ImageBackground: {
-    flex: 1,
-    resizeMode: 'cover',
-    width: '100%',
-    alignItems: 'center',
-  },
-});
+const staticImage = require('../Assets/Images/svitlana-VFmDiQtkxlw-unsplash.jpg');
 
 export const ChallengesPage = ({navigation}) => {
-  return (
-    <View style={styles.container}>
-      <ImageBackground source={staticImage} style={styles.ImageBackground}>
-        {/* <StatusBar style="auto" /> */}
-      </ImageBackground>
-    </View>
-  );
+    return (
+        <Card>
+          <Card.Title title="Zero waste for a week" subtitle="100 plantey points" fontFamily="josefin-sans-regular"/>
+          {/* <Card.Content>
+            <Title>Card title</Title>
+            <Paragraph>Card content</Paragraph>
+          </Card.Content> */}
+          <Card.Cover source={staticImage} />
+          <Card.Actions>
+            <Button color={Colors.accent}>Join!</Button>
+            <Button color={Colors.accent}>See details</Button>
+            <Text style={{position: 'absolute', right: 20}} >20 days left</Text>
+          </Card.Actions>
+        </Card>
+    );
 };
+
+
+
