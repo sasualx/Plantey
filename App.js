@@ -111,7 +111,7 @@ const App = () => {
           name="Tasks"
           component={HomeScreen}
           options={{
-            tabBarBadge: 3,
+            tabBarBadge: 4,
             tabBarBadgeStyle: {backgroundColor: Colors.base},
           }}
         />

@@ -3,7 +3,7 @@ import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {FlatList, Text, View} from 'react-native';
 import {Colors} from '../Colors';
 
-const Task = ({text, completed = false, disabled = false}) => {
+const Task = ({text, completed = false, disabled = false, onCheckboxClick}) => {
   console.log(text);
   return (
     <View
@@ -16,6 +16,13 @@ const Task = ({text, completed = false, disabled = false}) => {
         isChecked={completed}
         fillColor={Colors.accent}
         disableBuiltInState={disabled}
+        onPress={(isChecked: boolean) => {
+          if (isChecked) {
+            onCheckboxClick(true);
+          } else {
+            onCheckboxClick(false);
+          }
+        }}
       />
       <Text style={{color: Colors.accent, fontWeight: 'bold', fontSize: 20}}>
         {text}
@@ -24,10 +31,15 @@ const Task = ({text, completed = false, disabled = false}) => {
   );
 };
 
-export const TaskView = ({tasks, disabled}) => {
+export const TaskView = ({tasks, disabled, onCheckboxClick}) => {
   const renderItem = ({item}) => (
     <View>
-      <Task text={item.text} completed={item.completed} disabled={disabled} />
+      <Task
+        text={item.text}
+        completed={item.completed}
+        disabled={disabled}
+        onCheckboxClick={onCheckboxClick}
+      />
     </View>
   );
 
