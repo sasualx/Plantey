@@ -1,8 +1,7 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {Text, View, TouchableOpacity} from 'react-native';
-import {CalendarPage, HomeScreen} from './Components';
-// import ChallengesPage from './Components/ChallengesPage';
+import {CalendarPage, HomeScreen, ChallengesPage} from './Components';
 import {Colors as Color, Colors} from './Colors';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -112,7 +111,7 @@ const App = () => {
             tabBarBadgeStyle: {backgroundColor: Colors.base},
           }}
         />
-        <Tab.Screen name="Challenges" component={HomeScreen} />
+        <Tab.Screen name="Challenges" component={ChallengesPage} />
         <Tab.Screen name="Statistics" component={StatsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
