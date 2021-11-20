@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {Text, View, TouchableOpacity} from 'react-native';
-import {HomeScreen} from './Components';
+import {CalendarPage, HomeScreen} from './Components';
 import {Colors as Color, Colors} from './Colors';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -32,26 +32,6 @@ function SettingsScreen() {
 const App = () => {
   return (
     <NavigationContainer>
-      {/*<Stack.Navigator*/}
-      {/*  initialRouteName="Home"*/}
-      {/*  screenOptions={{*/}
-      {/*    headerMode: 'screen',*/}
-      {/*    headerTintColor: Colors.accent,*/}
-      {/*    headerStyle: {backgroundColor: Colors.primary},*/}
-      {/*  }}>*/}
-      {/*  <Stack.Screen*/}
-      {/*    name="Home"*/}
-      {/*    component={HomeScreen}*/}
-      {/*    options={{*/}
-      {/*      title: 'plantey',*/}
-      {/*      style: {*/}
-      {/*        backgroundColor: Colors.primary,*/}
-      {/*      },*/}
-      {/*    }}*/}
-      {/*  />*/}
-      {/*  <Stack.Screen name="Profile" component={ProfileScreen} />*/}
-      {/*</Stack.Navigator>*/}
-
       <Tab.Navigator
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
@@ -111,9 +91,12 @@ const App = () => {
           tabBarActiveTintColor: Color.accent,
           tabBarInactiveTintColor: Colors.primary,
           tabBarActiveBackgroundColor: Colors.secondary,
+          headerStyle: {
+            backgroundColor: Colors.primary,
+          },
         })}>
         <Tab.Screen name="Forum" component={HomeScreen} />
-        <Tab.Screen name="Record" component={HomeScreen} />
+        <Tab.Screen name="Record" component={CalendarPage} />
         <Tab.Screen
           name="Tasks"
           component={HomeScreen}

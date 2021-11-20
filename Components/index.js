@@ -1,4 +1,5 @@
-import {BottomBar} from './BottomBar';
 import {HomeScreen} from './HomeScreen';
+import {Header} from './Header';
+import {CalendarPage} from './CalendarPage';
 
-export {BottomBar, HomeScreen};
+export {HomeScreen, Header, CalendarPage};
