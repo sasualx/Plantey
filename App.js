@@ -21,7 +21,9 @@ const Tab = createBottomTabNavigator();
 function StatsScreen() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Here you will find the stats of your sustainability journey :)</Text>
+      <Text style={{color: Colors.accent}}>
+        Here you will find the stats of your sustainability journey :)
+      </Text>
     </View>
   );
 }
@@ -29,7 +31,9 @@ function StatsScreen() {
 function ForumScreen() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Expect exciting community initiatives about sustainability!</Text>
+      <Text style={{color: Colors.accent}}>
+        Expect exciting community initiatives about sustainability!
+      </Text>
     </View>
   );
 }
@@ -38,7 +42,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='Tasks'
+        initialRouteName="Tasks"
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
             let iconName;
@@ -95,7 +99,7 @@ const App = () => {
             );
           },
           tabBarActiveTintColor: Color.accent,
-          tabBarInactiveTintColor: Colors.primary,
+          tabBarInactiveTintColor: Colors.accent,
           tabBarActiveBackgroundColor: Colors.secondary,
           headerStyle: {
             backgroundColor: Colors.primary,
