@@ -16,7 +16,7 @@ const progressStyles = StyleSheet.create({
   containerStyle: {
     width: '100%',
     height: 40,
-    padding: 3,
+    padding: 0,
     borderColor: Colors.primary,
     borderWidth: 3,
     borderRadius: 30,
@@ -26,7 +26,7 @@ const progressStyles = StyleSheet.create({
   innerStyle: {
     width: '100%',
     height: 40,
-    borderRadius: 16,
+    borderRadius: 30,
     backgroundColor: Colors.primary,
   },
   label: {
