@@ -1,3 +1,4 @@
 import {BottomBar} from './BottomBar';
+import {HomeScreen} from './HomeScreen';
 
-export {BottomBar};
+export {BottomBar, HomeScreen};
