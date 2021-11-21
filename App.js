@@ -137,13 +137,13 @@ const App = () => {
               <Text style={{...style, tintColor: tintColor}}>Plantey</Text>
             );
           },
-          headerLeft: () => ({
-            /*<Image
+          /*headerLeft: () => (
+              <Image
               resizeMode="contain"
               style={{position: 'absolute', width: 30, left: 5}}
               source={logo}
+              ),
             />*/
-          }),
         })}>
         <Tab.Screen name="Forum" component={ForumScreen} />
         <Tab.Screen name="Record" component={CalendarPage} />
