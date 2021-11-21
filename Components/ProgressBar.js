@@ -32,7 +32,7 @@ const progressStyles = StyleSheet.create({
   },
   innerStyle: {
     width: '100%',
-    height: 40,
+    height: 34,
     borderRadius: 30,
     left: -3,
     backgroundColor: Colors.secondary,
