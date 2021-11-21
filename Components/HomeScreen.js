@@ -20,13 +20,12 @@ export const HomeScreen = ({navigation}) => {
         flexDirection: 'column',
         backgroundColor: Colors.base,
       }}>
-      <View>
+      <View style={{justifyContent: 'center', alignItems: 'center'}}>
         <Text
           style={{
             color: Colors.accent,
             fontSize: 28,
             padding: 40,
-            left: 15,
             fontFamily: 'Euphemia UCAS Regular 2.6.6 Regular 2.6.6',
           }}>
           Awesome, one tree has been planted for you this week. Keep it up!

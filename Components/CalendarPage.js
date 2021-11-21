@@ -94,7 +94,11 @@ export const CalendarPage = () => {
         }}
       />
       <View style={{padding: 20}}>
-        <TaskView tasks={tasks[selectedDate]} disabled={true} />
+        <TaskView
+          tasks={tasks[selectedDate]}
+          disabled={true}
+          onCheckboxClick={on => {}}
+        />
       </View>
       <Image
         source={require('../Assets/Images/trees-graphic-cropped.png')}
