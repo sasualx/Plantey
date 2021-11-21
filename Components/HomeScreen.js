@@ -36,8 +36,7 @@ export const HomeScreen = ({navigation}) => {
       <View style={{paddingTop: 50}}>
         <TaskView
           tasks={[
-            {text: 'Recycle plastic', completed: true},
-            {text: 'Bike to work'},
+            {text: 'Bike to work', completed: true},
             {text: 'Plastic free grocery shopping'},
             {text: 'Skip meat for a day'},
             {text: 'Zero Food Waste'},

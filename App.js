@@ -59,6 +59,8 @@ function ForumScreen() {
 }
 
 const App = () => {
+  const logo = require('./Assets/Images/microsoft.png');
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -124,6 +126,24 @@ const App = () => {
           headerStyle: {
             backgroundColor: Colors.primary,
           },
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontFamily: 'Lemon Tuesday',
+            fontSize: 30,
+            color: Colors.accent,
+          },
+          headerTitle: ({allowFontScaling, tintColor, style, children}) => {
+            return (
+              <Text style={{...style, tintColor: tintColor}}>Plantey</Text>
+            );
+          },
+          headerLeft: () => ({
+            /*<Image
+              resizeMode="contain"
+              style={{position: 'absolute', width: 30, left: 5}}
+              source={logo}
+            />*/
+          }),
         })}>
         <Tab.Screen name="Forum" component={ForumScreen} />
         <Tab.Screen name="Record" component={CalendarPage} />
