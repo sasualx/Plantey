@@ -134,9 +134,7 @@ const App = () => {
             color: Colors.accent,
           },
           headerTitle: ({allowFontScaling, tintColor, style, children}) => {
-            return (
-              <Text style={{...style, tintColor: tintColor}}>Plantey</Text>
-            );
+            return <Text style={{...style}}>Plantey</Text>;
           },
           headerLeft: () => (
             <Image
