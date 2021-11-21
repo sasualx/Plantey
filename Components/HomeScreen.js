@@ -29,7 +29,7 @@ export const HomeScreen = ({navigation}) => {
             left: 15,
             fontFamily: 'Euphemia UCAS Regular 2.6.6 Regular 2.6.6',
           }}>
-          Awesome, one tree has been planted for your good work this week. Keep it up!
+          Awesome, one tree has been planted for you this week. Keep it up!
         </Text>
       </View>
       <ProgressBar points={points} goal={goal} />
