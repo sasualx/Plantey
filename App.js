@@ -15,6 +15,7 @@ import {
   faUser,
   faCalendarDay,
 } from '@fortawesome/free-solid-svg-icons';
+import house from './Assets/Images/house.png';
 
 const Tab = createBottomTabNavigator();
 
@@ -59,8 +60,8 @@ function ForumScreen() {
 }
 
 const App = () => {
-  const logo = require('./Assets/Images/microsoft.png');
-
+  const user = require('./Assets/Images/user.png');
+  const house = require('./Assets/Images/wallless-house.png');
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -137,13 +138,20 @@ const App = () => {
               <Text style={{...style, tintColor: tintColor}}>Plantey</Text>
             );
           },
-          /*headerLeft: () => (
-              <Image
+          headerLeft: () => (
+            <Image
               resizeMode="contain"
-              style={{position: 'absolute', width: 30, left: 5}}
-              source={logo}
-              ),
-            />*/
+              style={{position: 'absolute', width: 40, left: 10}}
+              source={house}
+            />
+          ),
+          headerRight: () => (
+            <Image
+              resizeMode="contain"
+              style={{position: 'absolute', width: 40, right: 5}}
+              source={user}
+            />
+          ),
         })}>
         <Tab.Screen name="Forum" component={ForumScreen} />
         <Tab.Screen name="Record" component={CalendarPage} />
